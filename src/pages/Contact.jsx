@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 
+const contacts = [
+  {
+    icon: '🛠',
+    title: 'App Support',
+    desc: 'Questions about the app, bug reports, feature requests, or troubleshooting.',
+    email: 'support@daora.life',
+  },
+  {
+    icon: '🔒',
+    title: 'Privacy & Data',
+    desc: 'Data access, correction, deletion, portability, or any GDPR-related request.',
+    email: 'privacy@daora.life',
+  },
+  {
+    icon: '✉️',
+    title: 'General Contact',
+    desc: 'Partnerships, press, business inquiries, or anything else.',
+    email: 'contact@daora.life',
+  },
+]
+
 export default function Contact() {
   usePageMeta({
     title: 'Contact — Daora',
@@ -13,56 +34,65 @@ export default function Contact() {
 
       <div className="inner-header">
         <h1>Contact</h1>
-        <p>We'd love to hear from you.</p>
+        <p>Use the right email for the fastest response.</p>
       </div>
 
       <div className="inner-content">
-        <div className="contact-layout">
-          <div className="contact-info">
-            <div className="contact-info-card">
-              <div className="contact-info-icon">✉️</div>
-              <div className="contact-info-text">
-                <h3>Email</h3>
-                <a href="mailto:hello@daora.app">hello@daora.app</a>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 48 }}>
+          {contacts.map(({ icon, title, desc, email }) => (
+            <div key={email} style={{
+              background: 'var(--card)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--r-xl)',
+              padding: '24px 28px',
+              display: 'flex',
+              gap: 20,
+              alignItems: 'flex-start',
+            }}>
+              <div style={{
+                fontSize: 24,
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: 'var(--bg2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                {icon}
+              </div>
+              <div>
+                <h3 style={{ fontSize: 15, fontWeight: 650, marginBottom: 4, letterSpacing: '-.01em' }}>{title}</h3>
+                <p style={{ fontSize: 14, color: 'var(--t2)', lineHeight: 1.6, marginBottom: 10 }}>{desc}</p>
+                <a href={`mailto:${email}`} style={{ fontSize: 14, fontWeight: 500 }}>{email}</a>
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="contact-info-card">
-              <div className="contact-info-icon">📱</div>
-              <div className="contact-info-text">
-                <h3>Follow</h3>
-                <p>@daora.app</p>
-              </div>
-            </div>
-
-            <div className="contact-info-card">
-              <div className="contact-info-icon">📍</div>
-              <div className="contact-info-text">
-                <h3>Based in France</h3>
-                <p>France / European Union — operating under EU privacy regulations (GDPR).</p>
-              </div>
-            </div>
+        <div style={{
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-xl)',
+          padding: '24px 28px',
+          marginBottom: 32,
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            <span style={{ fontSize: 20 }}>📍</span>
+            <h3 style={{ fontSize: 15, fontWeight: 650, letterSpacing: '-.01em' }}>Based in France</h3>
           </div>
+          <p style={{ fontSize: 14, color: 'var(--t2)', lineHeight: 1.65, margin: 0 }}>
+            France / European Union — operating under EU privacy regulations (GDPR).
+            We aim to respond to all inquiries within 1–3 business days and to all
+            privacy requests within 30 days.
+          </p>
+        </div>
 
-          <div className="contact-form-card">
-            <form onSubmit={e => e.preventDefault()}>
-              <div className="form-field">
-                <label htmlFor="name">Your name</label>
-                <input id="name" type="text" placeholder="Your name" autoComplete="name" />
-              </div>
-              <div className="form-field">
-                <label htmlFor="email">Email address</label>
-                <input id="email" type="email" placeholder="you@example.com" autoComplete="email" />
-              </div>
-              <div className="form-field">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" placeholder="How can we help?" />
-              </div>
-              <button type="submit" className="form-submit">
-                Send message
-              </button>
-            </form>
-          </div>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+          <Link to="/support" style={{ fontSize: 14, color: 'var(--t2)' }}>Support</Link>
+          <Link to="/privacy" style={{ fontSize: 14, color: 'var(--t2)' }}>Privacy Policy</Link>
+          <Link to="/terms" style={{ fontSize: 14, color: 'var(--t2)' }}>Terms of Use</Link>
         </div>
       </div>
     </div>

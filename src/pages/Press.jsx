@@ -25,7 +25,7 @@ export default function Press() {
               Logos, screenshots, and brand assets for Daora. Files will be available
               once the app launches. Contact us to request assets early.
             </p>
-            <a href="mailto:[ADD BUSINESS EMAIL HERE]">[ADD BUSINESS EMAIL HERE]</a>
+            <a href="mailto:contact@daora.life">contact@daora.life</a>
           </div>
 
           <div className="press-card">
@@ -35,7 +35,7 @@ export default function Press() {
               For press inquiries, interview requests, or coverage of Daora,
               reach out to our press contact directly.
             </p>
-            <a href="mailto:[ADD BUSINESS EMAIL HERE]">[ADD BUSINESS EMAIL HERE]</a>
+            <a href="mailto:contact@daora.life">contact@daora.life</a>
           </div>
         </div>
 
