@@ -6,7 +6,7 @@ const cards = [
     icon: '✉️',
     title: 'Email support',
     body: null,
-    link: { href: 'mailto:support@daora.life', label: 'support@daora.life' },
+    link: { href: 'mailto:hello@daora.life', label: 'hello@daora.life' },
   },
   {
     icon: '⏱',
@@ -37,19 +37,19 @@ const faqs = [
   },
   {
     q: 'How do I delete my data?',
-    a: 'To delete locally stored data, delete the Daora app from your device. This permanently removes all content stored locally. If you have an account or synced data, you can request deletion by emailing privacy@daora.life with the subject line "Data Deletion Request." We will process your request within 30 days.',
+    a: 'To delete locally stored data, delete the Daora app from your device. This permanently removes all content stored locally. If you have an account or synced data, you can request deletion by emailing hello@daora.life with the subject line "Data Deletion Request." We will process your request within 30 days.',
   },
   {
     q: 'How do I report a bug?',
-    a: 'Email support@daora.life with your device model, iOS version, app version, a short description of the issue, and steps to reproduce it if possible. Screenshots or screen recordings help us resolve things faster.',
+    a: 'Email hello@daora.life with your device model, iOS version, app version, a short description of the issue, and steps to reproduce it if possible. Screenshots or screen recordings help us resolve things faster.',
   },
   {
     q: 'What if my data disappears or the app does not load?',
-    a: 'First, try closing and reopening the app. If the issue persists, restart your device. If data appears missing, do not delete the app before contacting us — email support@daora.life so we can help you investigate before any data is lost.',
+    a: 'First, try closing and reopening the app. If the issue persists, restart your device. If data appears missing, do not delete the app before contacting us — email hello@daora.life so we can help you investigate before any data is lost.',
   },
   {
     q: 'How do I contact privacy support?',
-    a: 'For all privacy-related requests — including data access, correction, deletion, or portability — email privacy@daora.life. We respond to privacy requests within 30 days as required by applicable law, including GDPR.',
+    a: 'For all privacy-related requests — including data access, correction, deletion, or portability — email hello@daora.life. We respond to privacy requests within 30 days as required by applicable law, including GDPR.',
   },
   {
     q: 'Is Daora medical, psychological, financial, or legal advice?',

@@ -86,7 +86,7 @@ const sections = [
         <p style={{ fontStyle: 'italic', color: 'var(--t2)' }}>
           The specific AI provider used will be disclosed here once confirmed. If you have
           questions about how your content is processed by AI features, contact us at{' '}
-          <a href="mailto:privacy@daora.life">privacy@daora.life</a>.
+          <a href="mailto:hello@daora.life">hello@daora.life</a>.
         </p>
       </>
     ),
@@ -149,7 +149,7 @@ const sections = [
         <p>
           We will update this section with the specific names of third-party providers as
           the app is finalized. If you have questions about third-party data processing,
-          contact us at <a href="mailto:privacy@daora.life">privacy@daora.life</a>.
+          contact us at <a href="mailto:hello@daora.life">hello@daora.life</a>.
         </p>
       </>
     ),
@@ -172,7 +172,7 @@ const sections = [
         </ul>
         <p>
           To exercise any of these rights, contact us at{' '}
-          <a href="mailto:privacy@daora.life">privacy@daora.life</a>. We will respond
+          <a href="mailto:hello@daora.life">hello@daora.life</a>. We will respond
           within 30 days as required by applicable law.
         </p>
         <p>
@@ -195,7 +195,7 @@ const sections = [
         <p>
           <strong>If an account exists:</strong> You can request account and data deletion
           directly within the app, or by contacting us at{' '}
-          <a href="mailto:privacy@daora.life">privacy@daora.life</a> with the subject line
+          <a href="mailto:hello@daora.life">hello@daora.life</a> with the subject line
           "Data Deletion Request." We will process your request within 30 days.
         </p>
         <p>
@@ -214,7 +214,7 @@ const sections = [
           Daora is intended for users aged 17 and older. We do not knowingly collect
           personal information from children under 13. If you believe a child under 13 has
           provided us with personal data, please contact us at{' '}
-          <a href="mailto:privacy@daora.life">privacy@daora.life</a> and we will take
+          <a href="mailto:hello@daora.life">hello@daora.life</a> and we will take
           steps to delete that information promptly.
         </p>
       </>
@@ -245,8 +245,8 @@ const sections = [
           personal data, please contact us:
         </p>
         <ul>
-          <li><strong>Privacy requests:</strong> <a href="mailto:privacy@daora.life">privacy@daora.life</a></li>
-          <li><strong>General support:</strong> <a href="mailto:support@daora.life">support@daora.life</a></li>
+          <li><strong>Privacy requests:</strong> <a href="mailto:hello@daora.life">hello@daora.life</a></li>
+          <li><strong>General support:</strong> <a href="mailto:hello@daora.life">hello@daora.life</a></li>
           <li><strong>Location:</strong> France / European Union</li>
         </ul>
       </>
@@ -279,7 +279,7 @@ export default function Privacy() {
         <p style={{ fontSize: 15, color: 'var(--t2)', lineHeight: 1.75, marginBottom: 28 }}>
           This Privacy Policy applies to the Daora iOS application and the daora.life
           website. Please read it carefully. If you have questions, contact us at{' '}
-          <a href="mailto:privacy@daora.life">privacy@daora.life</a>.
+          <a href="mailto:hello@daora.life">hello@daora.life</a>.
         </p>
 
         <div className="accordion">

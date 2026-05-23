@@ -198,7 +198,7 @@ const sections = [
       <>
         <p>If you have questions about these Terms, please contact us:</p>
         <ul>
-          <li><strong>Email:</strong> <a href="mailto:contact@daora.life">contact@daora.life</a></li>
+          <li><strong>Email:</strong> <a href="mailto:hello@daora.life">hello@daora.life</a></li>
           <li><strong>Location:</strong> France / European Union</li>
         </ul>
       </>
