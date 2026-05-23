@@ -74,19 +74,20 @@ const sections = [
       <>
         <p>
           Daora includes AI-powered features to assist with daily planning and self-reflection
-          suggestions. If you use these features, relevant content you have entered (such as
-          task descriptions or reflection prompts) may be processed by an AI service provider
-          to generate responses.
+          suggestions. When you use these features, relevant content you have entered (such as
+          task descriptions or reflection prompts) is sent to Anthropic, PBC to generate
+          responses. Anthropic's privacy policy is available at{' '}
+          <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a>.
+        </p>
+        <p>
+          Content sent to Anthropic is used solely to generate your requested response and is
+          subject to Anthropic's data usage policies. We do not use your content to train AI
+          models.
         </p>
         <p>
           AI-generated suggestions in Daora are intended as general productivity prompts only.
           They are not medical, psychological, financial, or legal advice, and should not be
           treated as such.
-        </p>
-        <p style={{ fontStyle: 'italic', color: 'var(--t2)' }}>
-          The specific AI provider used will be disclosed here once confirmed. If you have
-          questions about how your content is processed by AI features, contact us at{' '}
-          <a href="mailto:hello@daora.life">hello@daora.life</a>.
         </p>
       </>
     ),
@@ -98,8 +99,7 @@ const sections = [
         <p>Information collected may be used to:</p>
         <ul>
           <li>Provide, operate, and improve the app and its features.</li>
-          <li>Diagnose and resolve technical issues and crashes.</li>
-          <li>Understand how the app is used and which features are most valuable.</li>
+          <li>Diagnose and resolve technical issues.</li>
           <li>Respond to your support requests and communications.</li>
           <li>Comply with applicable legal obligations.</li>
         </ul>
@@ -115,19 +115,16 @@ const sections = [
     content: (
       <>
         <p>
-          Content you create in Daora — including daily plans, tasks, habits, reflections,
-          and notes — is stored locally on your device by default. This data does not leave
-          your device unless a cloud sync or account feature is explicitly enabled.
+          All content you create in Daora — including daily plans, tasks, habits,
+          reflections, and notes — is stored locally on your device. This data does not
+          leave your device except when you explicitly use an AI feature, in which case
+          only the content relevant to that feature is sent to Anthropic to generate a
+          response.
         </p>
         <p>
-          If you use cloud sync or account-based features, your data may be stored on
-          third-party servers. This policy will be updated to reflect those practices when
-          such features are available.
-        </p>
-        <p>
-          Analytics and crash reporting data may be processed by third-party service
-          providers acting as data processors on our behalf. These providers are bound by
-          contractual obligations to protect your data.
+          Daora does not use a backend database or cloud sync. Your data stays on your
+          device. If this changes in a future version, this policy will be updated before
+          the feature is released.
         </p>
       </>
     ),
@@ -137,19 +134,23 @@ const sections = [
     content: (
       <>
         <p>
-          Daora may use the following categories of third-party services, each of which may
-          process limited data as described:
+          Daora currently uses the following third-party services:
         </p>
         <ul>
-          <li><strong>Analytics:</strong> To understand usage patterns and improve the app. Analytics data is typically aggregated and not linked to your identity.</li>
-          <li><strong>Crash reporting:</strong> To detect and diagnose technical errors. Crash data may include device information and app state at the time of the error.</li>
-          <li><strong>AI processing:</strong> To power AI-assisted planning and reflection features. Only content relevant to the AI feature is processed.</li>
-          <li><strong>Payment processing:</strong> If you purchase a subscription, payments are processed by Apple through the App Store. We do not receive or store your payment information.</li>
+          <li>
+            <strong>Anthropic, PBC (AI processing):</strong> Powers AI-assisted planning
+            and reflection features. Only content you submit to an AI feature is sent.
+            See <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">Anthropic's Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Apple App Store (payment processing):</strong> If you purchase a
+            subscription, payments are handled entirely by Apple. We do not receive or
+            store your payment information.
+          </li>
         </ul>
         <p>
-          We will update this section with the specific names of third-party providers as
-          the app is finalized. If you have questions about third-party data processing,
-          contact us at <a href="mailto:hello@daora.life">hello@daora.life</a>.
+          We do not use third-party analytics or crash reporting SDKs. If this changes,
+          this policy will be updated before any new service is introduced.
         </p>
       </>
     ),
@@ -188,20 +189,15 @@ const sections = [
     content: (
       <>
         <p>
-          <strong>If data is stored locally on your device:</strong> You can delete all
-          local data by deleting the Daora app from your device. This permanently removes
-          all locally stored content.
+          All your data is stored locally on your device. To permanently delete all data,
+          simply delete the Daora app. This removes everything stored locally with no
+          recovery possible.
         </p>
         <p>
-          <strong>If an account exists:</strong> You can request account and data deletion
-          directly within the app, or by contacting us at{' '}
-          <a href="mailto:hello@daora.life">hello@daora.life</a> with the subject line
-          "Data Deletion Request." We will process your request within 30 days.
-        </p>
-        <p>
-          Upon deletion, your personal data will be permanently removed or anonymized,
-          including any content, analytics identifiers, and account information. Certain
-          data may be retained for a limited period where required by law.
+          If you contacted us by email and want us to delete your support communications,
+          email <a href="mailto:hello@daora.life">hello@daora.life</a> with the subject
+          line "Data Deletion Request" and we will remove your email records within 30
+          days.
         </p>
       </>
     ),
