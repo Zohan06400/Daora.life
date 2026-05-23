@@ -1,126 +1,81 @@
+import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
-
-const screenshotLabels = [
-  'Morning Planning',
-  'Focus Mode',
-  'Evening Reflection',
-  'Habit Tracker',
-  'Patterns & Insights',
-  'Memory Capsules',
-]
 
 export default function Press() {
   usePageMeta({
-    title: 'Press Kit — Daora',
-    description: 'Daora press kit. App descriptions, logo assets, and media contact.',
+    title: 'Press — Daora',
+    description: 'Daora press kit. Brand assets, app descriptions, and media contact.',
   })
 
   return (
-    <>
-      <section className="page-hero">
-        <div className="container">
-          <h1>Press Kit</h1>
-          <p>Everything you need to write about Daora.</p>
-        </div>
-      </section>
+    <div>
+      <Link to="/" className="inner-back">← Back to home</Link>
 
-      <div className="press-page">
-        {/* Logo */}
-        <div className="press-section">
-          <h2>Logo</h2>
-          <div className="press-logo-placeholder">
-            <div className="logo-preview">D</div>
-            <p>Logo assets coming soon. Contact us to request files.</p>
-          </div>
-        </div>
+      <div className="inner-header">
+        <h1>Press</h1>
+        <p>Press kit, brand assets, and media inquiries.</p>
+      </div>
 
-        {/* Short description */}
-        <div className="press-section">
-          <h2>About Daora</h2>
-          <div className="press-description-box">
-            <h3>Short Description</h3>
+      <div className="inner-content">
+        <div className="press-cards">
+          <div className="press-card">
+            <div className="press-card-icon">🗂</div>
+            <h3>Press Kit</h3>
             <p>
-              Daora is a personal productivity app that helps you plan your day,
-              track habits, focus deeply, reflect honestly, and understand your
-              growth patterns — all in one place.
+              Logos, screenshots, and brand assets for Daora. Files will be available
+              once the app launches. Contact us to request assets early.
             </p>
+            <a href="mailto:[ADD BUSINESS EMAIL HERE]">[ADD BUSINESS EMAIL HERE]</a>
+          </div>
+
+          <div className="press-card">
+            <div className="press-card-icon">📬</div>
+            <h3>Media Inquiries</h3>
+            <p>
+              For press inquiries, interview requests, or coverage of Daora,
+              reach out to our press contact directly.
+            </p>
+            <a href="mailto:[ADD BUSINESS EMAIL HERE]">[ADD BUSINESS EMAIL HERE]</a>
           </div>
         </div>
 
-        <div className="press-description-box">
-          <h3>Long Description</h3>
-          <p>
-            Daora is a daily productivity and personal growth app designed to help
-            you build better days, one at a time. It combines morning planning,
-            task and project management, a focused work mode, habit tracking,
-            evening reflection, and pattern analysis into a single, cohesive
-            experience.
+        <div style={{
+          marginTop: 32,
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-xl)',
+          padding: '28px 32px',
+        }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--t3)', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 16 }}>About Daora</p>
+          <p style={{ fontSize: 16, color: 'var(--t2)', lineHeight: 1.75, marginBottom: 16 }}>
+            Daora is a personal productivity app that helps you plan your day,
+            track habits, focus deeply, reflect honestly, and understand your
+            growth patterns — all in one place.
           </p>
-          <p style={{ marginTop: '16px' }}>
-            Each morning, Daora guides you through setting your top priorities and
-            preparing your routine. Throughout the day, you organize your projects
-            and tasks with context — including impact value, energy level, and time
-            estimates. When it's time to work, Focus Mode keeps you on track.
-            Evening Reflection helps you review what went well, what blocked you,
-            and how to improve tomorrow. And over time, Patterns & Insights reveals
-            how your habits, energy, and focus shape your best days.
+          <p style={{ fontSize: 16, color: 'var(--t2)', lineHeight: 1.75 }}>
+            Daora connects morning planning, task and project management, a focused
+            work mode, habit tracking, evening reflection, and pattern analysis into
+            a single cohesive experience. Built with a premium, minimal design
+            philosophy — no noise, no distractions, just the tools you need to build
+            momentum every day.
           </p>
-          <p style={{ marginTop: '16px' }}>
-            Memory Capsules let you capture meaningful moments from each day in a
-            clean, shareable format — turning your daily log into a personal record
-            of growth.
-          </p>
-          <p style={{ marginTop: '16px' }}>
-            Daora is built with a premium, minimal design philosophy. No noise.
-            No distractions. Just the tools you need to build momentum every day.
-          </p>
-        </div>
-
-        {/* Screenshots */}
-        <div className="press-section">
-          <h2>App Screenshots</h2>
-          <div className="press-screenshots-grid">
-            {screenshotLabels.map((label) => (
-              <div className="press-screenshot-placeholder" key={label}>
-                <span>📱</span>
-                <p>{label}</p>
+          <div style={{ marginTop: 24, display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+            {[
+              ['App Name', 'Daora'],
+              ['Tagline', 'Build your future daily.'],
+              ['Platform', 'iOS (App Store)'],
+              ['Category', 'Productivity / Personal Growth'],
+              ['Origin', 'France / European Union'],
+              ['Status', 'Coming soon'],
+            ].map(([k, v]) => (
+              <div key={k}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--t3)', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 4 }}>{k}</p>
+                <p style={{ fontSize: 14, color: 'var(--t1)', fontWeight: 500 }}>{v}</p>
               </div>
             ))}
           </div>
-          <p style={{ marginTop: '16px', fontSize: '14px', color: 'var(--text-tertiary)' }}>
-            Screenshots available upon request once the app launches.
-          </p>
-        </div>
-
-        {/* App details */}
-        <div className="press-section">
-          <h2>App Details</h2>
-          <div className="press-description-box">
-            <h3>Key Facts</h3>
-            <p><strong>App Name:</strong> Daora</p>
-            <p style={{ marginTop: '8px' }}><strong>Tagline:</strong> Build your future daily.</p>
-            <p style={{ marginTop: '8px' }}><strong>Platform:</strong> iOS (App Store)</p>
-            <p style={{ marginTop: '8px' }}><strong>Category:</strong> Productivity / Personal Growth</p>
-            <p style={{ marginTop: '8px' }}><strong>Origin:</strong> France / European Union</p>
-            <p style={{ marginTop: '8px' }}><strong>Status:</strong> Coming soon</p>
-          </div>
-        </div>
-
-        {/* Contact */}
-        <div className="press-section">
-          <h2>Press Contact</h2>
-          <div className="support-contact-card">
-            <p>
-              For press inquiries, interview requests, or media assets,
-              please reach out by email.
-            </p>
-            <a href="mailto:[ADD BUSINESS EMAIL HERE]" className="email-chip">
-              <span>📬</span>
-              [ADD BUSINESS EMAIL HERE]
-            </a>
-          </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

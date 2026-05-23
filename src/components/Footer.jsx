@@ -8,7 +8,6 @@ export default function Footer() {
           <h3>Daora</h3>
           <p>Build your future daily.</p>
         </div>
-
         <nav className="footer-links" aria-label="Footer navigation">
           <Link to="/support">Support</Link>
           <Link to="/privacy">Privacy Policy</Link>
@@ -17,7 +16,6 @@ export default function Footer() {
           <Link to="/press">Press</Link>
         </nav>
       </div>
-
       <div className="footer-bottom">
         © 2026 Daora. All rights reserved.
       </div>
