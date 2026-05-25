@@ -56,45 +56,76 @@ const features = [
   {
     icon: '☀️',
     bg: 'linear-gradient(135deg,#ff9f0a,#ffd60a)',
-    title: 'Morning Planning',
-    desc: 'Plan the day around your real priorities, not just a random task list.',
+    title: '1. Morning Planning',
+    desc: 'Start the day with intention instead of reaction. Choose your Top 3 priorities, prepare your routine, and decide what really deserves your energy today.',
+    purpose: 'Clarity before action',
+    helpsYou: 'Avoid random busy work',
   },
   {
     icon: '📋',
     bg: 'linear-gradient(135deg,#0071e3,#34aadc)',
-    title: 'Projects & Tasks',
-    desc: 'Organize work by impact, energy, and time so you know what deserves attention first.',
+    title: '2. Projects & Tasks',
+    desc: 'Organize meaningful work with impact value, energy required, time estimate, reminders, and notes — so every task has context, not just a checkbox.',
+    purpose: 'Turn goals into steps',
+    helpsYou: 'Focus on high-impact work',
   },
   {
     icon: '🎯',
     bg: 'linear-gradient(135deg,#ff375f,#ff6b6b)',
-    title: 'Focus Mode',
-    desc: 'Enter a distraction-free flow and stay connected to the task that matters now.',
+    title: '3. Focus Mode',
+    desc: 'Protect your attention when it is time to work. Start a focused session, follow the timer, reduce distractions, and stay connected to one important task.',
+    purpose: 'Deep work protection',
+    helpsYou: 'Stop switching and scrolling',
   },
   {
     icon: '✅',
     bg: 'linear-gradient(135deg,#1dbd6a,#30d158)',
-    title: 'Habit Tracker',
-    desc: 'Track morning and evening routines that support consistency, focus, and recovery.',
+    title: '4. Habit Tracker',
+    desc: 'Build consistency through morning and evening routines. Track the small actions that support your energy, discipline, and emotional stability over time.',
+    purpose: 'Daily stability',
+    helpsYou: 'Build identity daily',
   },
   {
     icon: '🌙',
     bg: 'linear-gradient(135deg,#6e40c9,#9b72ff)',
-    title: 'Evening Reflection',
-    desc: 'Close the day with awareness: what worked, what blocked you, and what to adjust.',
+    title: '5. Evening Reflection',
+    desc: 'Close the day with honesty. Rate your day, write what mattered most, identify what helped or blocked you, and choose what to adjust tomorrow.',
+    purpose: 'Learn from the day',
+    helpsYou: 'Stop repeating mistakes',
   },
   {
     icon: '📊',
     bg: 'linear-gradient(135deg,#1dbd6a,#20c0a0)',
-    title: 'Patterns & Insights',
-    desc: 'Discover which routines, habits, and focus patterns are linked to your best days.',
+    title: '6. Patterns & Insights',
+    desc: 'See how your habits, tasks, energy, focus, and reflections connect. Daora helps you discover what creates your best days — and what quietly blocks them.',
+    purpose: 'Self-knowledge through data',
+    helpsYou: 'Plan smarter every week',
   },
   {
     icon: '✨',
     bg: 'linear-gradient(135deg,#5e8eff,#9b72ff)',
-    title: 'Memory Capsules',
-    desc: 'Turn meaningful daily moments into clean, shareable personal summaries.',
+    title: '7. Memory Capsules',
+    desc: 'Turn your day into a clean, beautiful recap. Save meaningful moments, celebrate progress, and create a personal archive of who you are becoming.',
+    purpose: 'Emotional memory',
+    helpsYou: 'Make progress visible',
   },
+  {
+    icon: '🔄',
+    bg: 'linear-gradient(135deg,#34aadc,#5e8eff)',
+    title: '8. The Daily Loop',
+    desc: 'Plan in the morning, execute during the day, reflect in the evening, and let your patterns improve tomorrow\'s plan. Every day teaches the next.',
+    purpose: 'Continuous improvement',
+    helpsYou: 'Make every day better',
+  },
+]
+
+const systemFlow = [
+  { icon: '📋', label: 'Projects' },
+  { icon: '☀️', label: 'Morning Plan' },
+  { icon: '🎯', label: 'Focus' },
+  { icon: '🌙', label: 'Reflect' },
+  { icon: '📊', label: 'Patterns' },
+  { icon: '✨', label: 'Better Tomorrow' },
 ]
 
 export default function Home() {
@@ -110,27 +141,22 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-badge">
           <span className="hero-badge-dot" />
-          AI-powered daily planning &amp; self-reflection
+          Coming soon on the App Store
         </div>
 
         <h1 className="hero-title">
-          Design better days with clarity, focus, and reflection.
+          Build better days with structure and reflection.
         </h1>
 
         <p className="hero-subtitle">
-          Daora helps you plan your day, follow the routines that keep you
-          grounded, stay focused on what matters, and understand the patterns
-          behind your best days.
+          Daora helps you plan your day, follow routines, focus on important
+          tasks, and understand the patterns behind your best days.
         </p>
 
         <div className="hero-cta-group">
-          <a href="/contact" className="hero-app-btn">
-            Coming soon on the App Store
+          <a href="mailto:hello@daora.life" className="hero-app-btn">
+            Get notified at launch
           </a>
-          <p className="hero-secondary">
-            Be the first to know when Daora launches.{' '}
-            <a href="/contact">Get in touch →</a>
-          </p>
         </div>
 
         <div className="phones-showcase">
@@ -139,13 +165,24 @@ export default function Home() {
               <div className="phone-screen"
                 style={{ background: 'linear-gradient(160deg,#1a1230 0%,#0f0a20 100%)' }}>
                 <div className="phone-screen-content">
-                  <div className="screen-icon">☀️</div>
-                  <div className="screen-bars">
-                    <div className="screen-bar long" />
-                    <div className="screen-bar medium" />
-                    <div className="screen-bar short" />
+                  <div className="phone-app-header">
+                    <span>☀️</span>
+                    <span className="phone-app-title">Morning Plan</span>
                   </div>
-                  <div className="screen-label">Morning</div>
+                  <div className="phone-app-items">
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#ff9f0a' }} />
+                      <span>Top 3 Priorities</span>
+                    </div>
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#5e8eff' }} />
+                      <span>Morning Routine</span>
+                    </div>
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#30d158' }} />
+                      <span>Energy Check</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,16 +191,48 @@ export default function Home() {
           <div className="phone-wrapper phone-md center">
             <div className="phone">
               <div className="phone-screen"
-                style={{ background: 'linear-gradient(160deg,#0a0a1a 0%,#10103a 100%)' }}>
-                <div className="phone-screen-content">
-                  <div className="screen-icon">🎯</div>
-                  <div className="screen-bars">
-                    <div className="screen-bar long" />
-                    <div className="screen-bar medium" />
-                    <div className="screen-bar short" />
-                    <div className="screen-bar long" />
+                style={{ background: 'linear-gradient(160deg,#110d28 0%,#1c1550 100%)' }}>
+                <div className="phone-screen-content pday-content">
+                  <div className="pday-date-row">
+                    <span className="pday-arrow">‹</span>
+                    <span className="pday-date-text">May 25, 2026</span>
+                    <span className="pday-arrow">›</span>
                   </div>
-                  <div className="screen-label">Focus Mode</div>
+                  <div className="pday-week">
+                    {[['M',25],['T',26],['W',27],['T',28],['F',29],['S',30],['S',31]].map(([d,n],i) => (
+                      <div key={i} className={`pday-day${i===0?' pday-day-a':''}`}>
+                        <span className="pday-wd">{d}</span>
+                        <span className="pday-wn">{n}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="pday-routine">
+                    <span>🌅</span>
+                    <span className="pday-rname">Morning Routine</span>
+                    <span className="pday-rtime">06:30</span>
+                    <span className="pday-rprog">4/6</span>
+                  </div>
+                  <div className="pday-tasks">
+                    <div className="pday-block">
+                      <div className="pday-btime">8:00<br/>12:00</div>
+                      <div className="pday-btask"><span>💼</span> Work</div>
+                      <div className="pday-bfocus">▶ Focus</div>
+                    </div>
+                    <div className="pday-hint">Use 2h 30m wisely.</div>
+                    <div className="pday-block">
+                      <div className="pday-btime">14:30<br/>16:30</div>
+                      <div className="pday-btask"><span>🏋️</span> Gym</div>
+                      <div className="pday-bfocus">▶ Focus</div>
+                    </div>
+                  </div>
+                  <div className="pday-nav">
+                    {[['📁','Projects'],['📋','Plan'],['▶','Flow'],['🌙','Reflect'],['📊','Patterns']].map(([ic,lb]) => (
+                      <div key={lb} className={`pday-ni${lb==='Flow'?' pday-ni-a':''}`}>
+                        <span>{ic}</span>
+                        <span>{lb}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,18 +243,33 @@ export default function Home() {
               <div className="phone-screen"
                 style={{ background: 'linear-gradient(160deg,#1a1030 0%,#120a28 100%)' }}>
                 <div className="phone-screen-content">
-                  <div className="screen-icon">🌙</div>
-                  <div className="screen-bars">
-                    <div className="screen-bar medium" />
-                    <div className="screen-bar long" />
-                    <div className="screen-bar short" />
+                  <div className="phone-app-header">
+                    <span>🌙</span>
+                    <span className="phone-app-title">Evening Review</span>
                   </div>
-                  <div className="screen-label">Reflection</div>
+                  <div className="phone-app-items">
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#ffd60a' }} />
+                      <span>Daily Rating</span>
+                    </div>
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#30d158' }} />
+                      <span>What Helped</span>
+                    </div>
+                    <div className="phone-app-item">
+                      <span className="phone-item-dot" style={{ background: '#ff375f' }} />
+                      <span>What Blocked You</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <p className="phones-caption">
+          One system for planning your day, protecting your focus, and learning from your patterns.
+        </p>
       </section>
 
       {/* ── How it works ── */}
@@ -239,26 +323,58 @@ export default function Home() {
       </section>
 
       {/* ── Features ── */}
-      <section className="section" id="features"
-        style={{ background: 'linear-gradient(180deg,rgba(255,255,255,.02) 0%,transparent 100%)' }}>
+      <section className="features-section section" id="features">
         <div className="container">
           <div className="section-header">
             <span className="section-label">Features</span>
-            <h2>Everything connected for your best day.</h2>
-            <p>
-              Your tasks, habits, routines, reflections, and insights work
-              together in one simple daily flow.
+            <h2 className="features-heading">
+              A complete system for{' '}
+              <span className="gradient-text">building better days.</span>
+            </h2>
+            <p className="features-subhead">
+              Daora connects planning, routines, focus, reflection, and personal
+              insights into one daily loop — so you do not just stay busy, you
+              learn what actually helps you grow.
             </p>
           </div>
 
-          <div className="features-grid">
-            {features.map(({ icon, bg, title, desc }) => (
-              <div className="feature-card" key={title}>
-                <div className="feature-icon" style={{ background: bg }}>{icon}</div>
+          <div className="features-grid-v2">
+            {features.map(({ icon, bg, title, desc, purpose, helpsYou }) => (
+              <div className="feature-card-v2" key={title}>
+                <div className="feature-icon-v2" style={{ background: bg }}>{icon}</div>
                 <h3>{title}</h3>
-                <p>{desc}</p>
+                <p className="feature-card-desc">{desc}</p>
+                <div className="feature-meta">
+                  <div className="feature-meta-row">
+                    <span className="meta-label">Purpose</span>
+                    <span className="meta-val">{purpose}</span>
+                  </div>
+                  <div className="feature-meta-row">
+                    <span className="meta-label">Helps you</span>
+                    <span className="meta-val">{helpsYou}</span>
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="system-flow-card">
+            <div className="system-flow-steps">
+              {systemFlow.flatMap(({ icon, label }, i) => {
+                const step = (
+                  <div className="sflow-step" key={label}>
+                    <div className="sflow-circle">{icon}</div>
+                    <span className="sflow-label">{label}</span>
+                  </div>
+                )
+                return i < systemFlow.length - 1
+                  ? [step, <span className="sflow-arrow" key={`a${i}`}>→</span>]
+                  : [step]
+              })}
+            </div>
+            <p className="system-tagline">
+              Daora is not just a task manager. It is a feedback system for your life.
+            </p>
           </div>
         </div>
       </section>

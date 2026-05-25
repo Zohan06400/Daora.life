@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Features',     href: '/#features'     },
-  { label: 'How it works', href: '/#how-it-works'  },
-  { label: 'About',        href: '/#about'         },
-  { label: 'Contact',      href: '/contact'        },
+  { label: 'Home',     href: '/'           },
+  { label: 'Features', href: '/#features'  },
+  { label: 'Privacy',  href: '/privacy'    },
+  { label: 'Support',  href: '/support'    },
+  { label: 'Contact',  href: '/contact'    },
 ]
 
 export default function Navbar() {
@@ -33,8 +34,8 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href="/#features" className="nav-cta nav-cta-desktop">
-            Coming soon
+          <a href="mailto:hello@daora.life" className="nav-cta nav-cta-desktop">
+            Get notified
           </a>
 
           <button
