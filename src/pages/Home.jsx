@@ -1,4 +1,5 @@
 import { usePageMeta } from '../hooks/usePageMeta'
+import BeforeAfterSection from '../components/BeforeAfterSection'
 
 const flowSteps = [
   {
@@ -323,6 +324,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BeforeAfterSection />
 
       {/* ── Features ── */}
       <section className="features-section section" id="features">
