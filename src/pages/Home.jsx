@@ -275,7 +275,7 @@ export default function Home() {
       {/* ── How it works ── */}
       <section className="section how-section" id="how-it-works">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <span className="section-label">How Daora works</span>
             <h2>A simple daily flow that creates clarity and momentum.</h2>
           </div>
@@ -283,8 +283,9 @@ export default function Home() {
           <div className="flow-outer">
             <div className="flow-line" />
             <div className="flow-cards">
-              {flowSteps.map(({ icon, bg, title, sub, desc }) => (
-                <div className="flow-card" key={title}>
+              {flowSteps.map(({ icon, bg, title, sub, desc }, i) => (
+                <div className="flow-card reveal" key={title}
+                  style={{ '--reveal-delay': `${i * 0.1}s` }}>
                   <div className="flow-dot" />
                   <div className="flow-icon" style={{ background: bg }}>{icon}</div>
                   <h3>{title}</h3>
@@ -300,7 +301,7 @@ export default function Home() {
       {/* ── Why different ── */}
       <section className="section why-section" id="about">
         <div className="container">
-          <div className="why-intro">
+          <div className="why-intro reveal">
             <span className="section-label">Why Daora is different</span>
             <h2>Not just a planner.<br />A daily growth system.</h2>
             <p>
@@ -311,8 +312,9 @@ export default function Home() {
           </div>
 
           <div className="why-cards">
-            {whyCards.map(({ icon, bg, title, desc }) => (
-              <div className="why-card" key={title}>
+            {whyCards.map(({ icon, bg, title, desc }, i) => (
+              <div className="why-card reveal" key={title}
+                style={{ '--reveal-delay': `${i * 0.1}s` }}>
                 <div className="why-icon" style={{ background: bg }}>{icon}</div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
@@ -325,7 +327,7 @@ export default function Home() {
       {/* ── Features ── */}
       <section className="features-section section" id="features">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <span className="section-label">Features</span>
             <h2 className="features-heading">
               A complete system for{' '}
@@ -339,8 +341,9 @@ export default function Home() {
           </div>
 
           <div className="features-grid-v2">
-            {features.map(({ icon, bg, title, desc, purpose, helpsYou }) => (
-              <div className="feature-card-v2" key={title}>
+            {features.map(({ icon, bg, title, desc, purpose, helpsYou }, i) => (
+              <div className="feature-card-v2 reveal" key={title}
+                style={{ '--reveal-delay': `${(i % 4) * 0.08}s` }}>
                 <div className="feature-icon-v2" style={{ background: bg }}>{icon}</div>
                 <h3>{title}</h3>
                 <p className="feature-card-desc">{desc}</p>
@@ -358,7 +361,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="system-flow-card">
+          <div className="system-flow-card reveal" style={{ '--reveal-delay': '0.1s' }}>
             <div className="system-flow-steps">
               {systemFlow.flatMap(({ icon, label }, i) => {
                 const step = (
@@ -381,12 +384,12 @@ export default function Home() {
 
       {/* ── CTA ── */}
       <section className="cta-section">
-        <h2>Your best days are not random.</h2>
-        <p>
+        <h2 className="reveal">Your best days are not random.</h2>
+        <p className="reveal" style={{ '--reveal-delay': '0.1s' }}>
           Daora helps you notice what creates momentum, what drains your
           energy, and what small actions move your life forward.
         </p>
-        <a href="/contact" className="btn btn-glass">Get in touch</a>
+        <a href="/contact" className="btn btn-glass reveal" style={{ '--reveal-delay': '0.2s' }}>Get in touch</a>
       </section>
     </>
   )
