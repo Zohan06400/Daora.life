@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Support page for Daora — the personal growth and daily planning app." />
+  <title>Daora Support</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #86868b;
+      --accent: #0071e3;
+      --accent-hover: #0077ed;
+      --radius: 18px;
+      --radius-sm: 12px;
+      --shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 0 16px 64px;
+    }
+
+    /* ── Header ── */
+    header {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 0 40px;
+      text-align: center;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+    }
+
+    .app-icon svg {
+      width: 44px;
+      height: 44px;
+      opacity: 0.9;
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-icon.blue   { background: #e8f1fd; }
+    .card-icon.green  { background: #e5f5eb; }
+    .card-icon.purple { background: #ede8fd; }
+    .card-icon.orange { background: #fff0e6; }
+
+    .card-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .card-icon.blue   svg { color: #0071e3; }
+    .card-icon.green  svg { color: #34c759; }
+    .card-icon.purple svg { color: #7c3aed; }
+    .card-icon.orange svg { color: #f57c00; }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+
+    /* ── Contact section ── */
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .email-link:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .faq-item:first-child {
+      padding-top: 0;
+    }
+
+    .faq-q {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 680px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.6;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      body { padding: 0 12px 48px; }
+      header { padding: 48px 0 32px; }
+      .card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-icon" aria-hidden="true">
+      <!-- Simple geometric icon representing architecture / structure -->
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="28" width="8" height="10" rx="1.5" fill="white" opacity="0.85"/>
+        <rect x="18" y="20" width="8" height="18" rx="1.5" fill="white"/>
+        <rect x="28" y="12" width="8" height="26" rx="1.5" fill="white" opacity="0.7"/>
+        <line x1="8" y1="26" x2="36" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+      </svg>
+    </div>
+    <h1>Daora Support</h1>
+    <p>Need help with Daora? We're here to help.</p>
+  </header>
+
+  <main>
+
+    <!-- Contact Support -->
+    <section class="card" aria-labelledby="contact-heading">
+      <div class="card-header">
+        <div class="card-icon blue" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+        </div>
+        <h2 id="contact-heading">Contact Support</h2>
+      </div>
+      <p>For questions, feedback, bug reports, or help with the app, reach out at:</p>
+      <a class="email-link" href="mailto:hello@daora.life">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+        hello@daora.life
+      </a>
+    </section>
+
+    <!-- About the App -->
+    <section class="card" aria-labelledby="about-heading">
+      <div class="card-header">
+        <div class="card-icon green" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h2 id="about-heading">About the App</h2>
+      </div>
+      <p>Daora helps users plan their day, track habits, focus on important tasks, reflect daily, and understand their personal growth patterns.</p>
+    </section>
+
+    <!-- Common Questions -->
+    <section class="card" aria-labelledby="faq-heading">
+      <div class="card-header">
+        <div class="card-icon purple" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h2 id="faq-heading">Common Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">How do I use the app?</p>
+          <p class="faq-a">Start by planning your day, selecting your top priorities, tracking habits, and completing your evening reflection.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is my data private?</p>
+          <p class="faq-a">User data is stored locally on your device and is not shared publicly.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">How can I report a bug?</p>
+          <p class="faq-a">Send a short description of the issue, your device model, and screenshots if possible to the support email above.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="card" aria-labelledby="privacy-heading">
+      <div class="card-header">
+        <div class="card-icon orange" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h2 id="privacy-heading">Privacy</h2>
+      </div>
+      <p>For privacy-related questions, please contact us at the same email address above.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Daora. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
